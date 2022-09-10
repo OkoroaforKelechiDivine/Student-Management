@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="ISO-8859-1">
   <title>Student Management System</title>
@@ -10,15 +10,10 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
   <a class="navbar-brand" href="#">Student Management System</a>
-
-  <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -29,6 +24,7 @@
 </nav>
 <br>
 <br>
+
 <div class = "container">
   <div class = "row">
     <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
@@ -37,35 +33,41 @@
         <form th:action="@{/students/{id} (id=${student.id})}" th:object = "${student}" method="POST">
           <div class ="form-group">
             <label> Student First Name </label>
-            <input
-                    type = "text"
-                    name = "firstName"
-                    th:field = "*{firstName}"
-                    class = "form-control"
-                    placeholder="Enter Student First Name"
-            />
+            <label>
+              <input
+                      type = "text"
+                      name = "firstName"
+                      th:field = "*{firstName}"
+                      class = "form-control"
+                      placeholder="Enter Student First Name"
+              />
+            </label>
           </div>
 
           <div class ="form-group">
             <label> Student Last Name </label>
-            <input
-                    type = "text"
-                    name = "lastName"
-                    th:field = "*{lastName}"
-                    class = "form-control"
-                    placeholder="Enter Student Last Name"
-            />
+            <label>
+              <input
+                      type = "text"
+                      name = "lastName"
+                      th:field = "*{lastName}"
+                      class = "form-control"
+                      placeholder="Enter Student Last Name"
+              />
+            </label>
           </div>
 
           <div class ="form-group">
             <label> Student Email </label>
-            <input
-                    type = "text"
-                    name = "email"
-                    th:field = "*{email}"
-                    class = "form-control"
-                    placeholder="Enter Student Email"
-            />
+            <label>
+              <input
+                      type = "text"
+                      name = "email"
+                      th:field = "*{email}"
+                      class = "form-control"
+                      placeholder="Enter Student Email"
+              />
+            </label>
           </div>
 
           <div class = "box-footer">
@@ -74,7 +76,6 @@
             </button>
           </div>
         </form>
-
       </div>
     </div>
   </div>
